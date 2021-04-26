@@ -15,7 +15,7 @@ class Vbtree{
         // class Hasher;
         // the constructor   m is the number of files,  n is the total keywords in all leaf nodes(n has counted repeated word)
         Vbtree(int m, unsigned long n):L{int(log2(m)) < log2(m)? int(log2(m))+2:int(log2(m) + 1)},N{n}{
-            hashtable.reserve(L*N);
+            hashtable.reserve(L*N/0.8);
             std::cout<<"this hashtable has successfully reserved "<<L*N << " insert position\n";
             }
 
